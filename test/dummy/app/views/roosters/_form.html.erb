@@ -1,0 +1,25 @@
+<%= form_for(@rooster) do |f| %>
+  <% if @rooster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rooster.errors.count, "error") %> prohibited this rooster from being saved:</h2>
+
+      <ul>
+      <% @rooster.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :kind %><br />
+    <%= f.text_field :kind %>
+  </div>
+  <div class="field">
+    <%= f.label :awesomeness %><br />
+    <%= f.text_field :awesomeness %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Brand:</b>
+  <%= @trumpet.brand %>
+</p>
+
+<p>
+  <b>Loudness:</b>
+  <%= @trumpet.loudness %>
+</p>
+
+
+<%= link_to 'Edit', edit_trumpet_path(@trumpet) %> |
+<%= link_to 'Back', trumpets_path %>

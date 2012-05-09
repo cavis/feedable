@@ -1,0 +1,23 @@
+<h1>Listing alligators</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @alligators.each do |alligator| %>
+  <tr>
+    <td><%= alligator.name %></td>
+    <td><%= link_to 'Show', alligator %></td>
+    <td><%= link_to 'Edit', edit_alligator_path(alligator) %></td>
+    <td><%= link_to 'Destroy', alligator, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Alligator', new_alligator_path %>

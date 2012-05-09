@@ -1,0 +1,25 @@
+<h1>Listing roosters</h1>
+
+<table>
+  <tr>
+    <th>Kind</th>
+    <th>Awesomeness</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @roosters.each do |rooster| %>
+  <tr>
+    <td><%= rooster.kind %></td>
+    <td><%= rooster.awesomeness %></td>
+    <td><%= link_to 'Show', rooster %></td>
+    <td><%= link_to 'Edit', edit_rooster_path(rooster) %></td>
+    <td><%= link_to 'Destroy', rooster, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rooster', new_rooster_path %>
