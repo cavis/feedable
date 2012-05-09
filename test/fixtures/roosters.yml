@@ -1,0 +1,15 @@
+roostr1:
+  kind: The first roostr
+  awesomeness: "4"
+  created_at: "2012-01-10 00:00:00"
+  updated_at: "2012-01-10 00:00:00"
+roostr2:
+  kind: roostr the second
+  awesomeness: "100"
+  created_at: "2012-02-10 00:00:00"
+  updated_at: "2012-02-10 00:00:00"
+roostr3:
+  kind: roostr 3
+  awesomeness: "5"
+  created_at: "2012-03-10 00:00:00"
+  updated_at: "2012-03-10 00:00:00"

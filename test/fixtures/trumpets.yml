@@ -1,0 +1,15 @@
+roostr1:
+  brand: yamaha
+  loudness: "a bit"
+  created_at: "2012-01-15 00:00:00"
+  updated_at: "2012-01-15 00:00:00"
+roostr2:
+  brand: bach
+  loudness: "earth shattering"
+  created_at: "2012-02-15 00:00:00"
+  updated_at: "2012-02-15 00:00:00"
+roostr3:
+  brand: getzen
+  loudness: "annoying"
+  created_at: "2012-03-15 00:00:00"
+  updated_at: "2012-03-15 00:00:00"
