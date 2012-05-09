@@ -1,0 +1,2 @@
+module Feedable
+end
