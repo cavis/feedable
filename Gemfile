@@ -11,6 +11,7 @@ gemspec
 # your gem to rubygems.org.
 
 group :test do
+    gem 'minitest'
     gem 'turn'
 end
 

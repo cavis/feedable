@@ -51,4 +51,17 @@ class FeebableTest < ActiveSupport::TestCase
       @stuff = feedable Post, Rooster, Trumpet, Alligator
     end
   end
+
+  test "duplicate feedable ids" do
+    gt = Alligator.new
+    gt.id = roosters(:roostr3).id
+    gt.save
+
+    @stuff = feedable Post, Rooster, Alligator, :limit => 3
+
+    assert_equal @stuff.length, 3,              "not 3 things"
+    assert_equal @stuff[0], gt,                 "missing new gator"
+    assert_equal @stuff[1], roosters(:roostr3), "missing first rooster"
+    assert_equal @stuff[2], posts(:post3),      "wrong order"
+  end
 end

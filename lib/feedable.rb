@@ -60,7 +60,7 @@ def feedable(*args)
 
     # attach to the output
     recs.each do |r|
-      idx = all_ids.index {|x| x['key'] == r.id}
+      idx = all_ids.index {|x| x['key'] == r.id && x['type'] == q.klass.name}
       all_recs[idx] = r
     end
   end
