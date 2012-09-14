@@ -33,7 +33,7 @@ def feedable(*args)
     tmp.offset_value = nil
 
     # add to unions
-    tmp.select_values = ["#{tmp.primary_key} as key", "#{tmp.feedable_col} as dtim", "'#{tmp.klass}' as type"]
+    tmp.select_values = ["#{tmp.primary_key} as keyfld", "#{tmp.feedable_col} as dtim", "'#{tmp.klass}' as type"]
     clauses.push tmp.to_sql
   end
 
@@ -55,12 +55,12 @@ def feedable(*args)
     q.offset_value = nil
 
     # collect ids
-    ids = all_ids.select{|x| x['type'] == q.klass.name}.collect{|x| x['key']}
+    ids = all_ids.select{|x| x['type'] == q.klass.name}.collect{|x| x['keyfld']}
     recs = q.find(ids)
 
     # attach to the output
     recs.each do |r|
-      idx = all_ids.index {|x| x['key'] == r.id && x['type'] == q.klass.name}
+      idx = all_ids.index {|x| x['keyfld'] == r.id && x['type'] == q.klass.name}
       all_recs[idx] = r
     end
   end
