@@ -40,7 +40,7 @@ def feedable(*args)
   # join together and execute
   unions = clauses.join(' UNION ')
   paging = "order by dtim #{opts[:order]} limit #{opts[:limit]} offset #{opts[:offset]}"
-  query = "select * from (#{unions}) " + paging
+  query = "select * from (#{unions}) fdbl " + paging
   all_ids = ActiveRecord::Base.connection.select_all(query)
   all_recs = []
 
